@@ -37,7 +37,12 @@ def password_strength(password):
     else:
         feedback.append("Password should include at least one special character (!, @, #, etc.).")
 
-
+    # Add dictionary word check to avoid common words
+    lower_password = password.lower()
+    if any(word in dictionary_words for word in re.split(r'\W+', lower_password)):
+        feedback.append("Password should not contain common dictionary words.")
+    else:
+        score += 1
 
 
 
