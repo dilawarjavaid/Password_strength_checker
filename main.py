@@ -8,6 +8,11 @@ nltk.download('words')
 #Load dictionary words into a set for fast lookup
 dictionary_words = set(words.words())
 
+#Define the password_strength function structure
+def password_strength(password):
+    feedback = []
+    score = 0
+
 
 
 
