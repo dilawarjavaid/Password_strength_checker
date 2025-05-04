@@ -44,6 +44,15 @@ def password_strength(password):
     else:
         score += 1
 
+    #Add strength evaluation logic
+    if score == 5:
+        strength = "Strong"
+    elif 3 <= score < 5:
+        strength = "Moderate"
+    else:
+        strength = "Weak"
+
+
 
 
 
