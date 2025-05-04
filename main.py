@@ -31,6 +31,13 @@ def password_strength(password):
     else:
         feedback.append("Password should include at least one digit.")
 
+    #Add special character check
+    if any(char in punctuation for char in password):
+        score += 1
+    else:
+        feedback.append("Password should include at least one special character (!, @, #, etc.).")
+
+
 
 
 
