@@ -25,6 +25,15 @@ def password_strength(password):
     else:
         feedback.append("Password should include both uppercase and lowercase letters.")
 
+    #Add digit check
+    if re.search(r'\d', password):
+        score += 1
+    else:
+        feedback.append("Password should include at least one digit.")
+
+
+
+
 
 
 
