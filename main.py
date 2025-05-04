@@ -52,6 +52,21 @@ def password_strength(password):
     else:
         strength = "Weak"
 
+    return strength, feedback
+
+#Add user interaction for input/output
+print("Welcome to the Password Strength Checker!")
+password = input("Enter your password: ").strip()
+
+strength, feedback = password_strength(password)
+print(f"\nPassword Strength: {strength}")
+
+if feedback:
+    print("\nSuggestions to improve your password:")
+    for suggestion in feedback:
+        print(f"- {suggestion}")
+
+
 
 
 
